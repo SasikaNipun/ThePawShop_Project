@@ -20,11 +20,11 @@ public class manageCashierDetails_Ctrl_ extends manageProductDetails_Ctrl_{
     try {
 
         File file = new File("CashierDetailsDB.txt");
-        BufferedReader br = new BufferedReader(new FileReader(file));
+        BufferedReader MC = new BufferedReader(new FileReader(file));
         String line;
 
 
-        while ((line = br.readLine()) != null) {
+        while ((line = MC.readLine()) != null) {
 
             String[] CashierData = line.split(",");
 
@@ -42,7 +42,7 @@ public class manageCashierDetails_Ctrl_ extends manageProductDetails_Ctrl_{
             }
         }
 
-        br.close();
+        MC.close();
     } catch (IOException e) {
 
         e.printStackTrace();
